@@ -27,35 +27,35 @@ class knightChessBoard{
     r=row;
     for(int c=col ; c>=0 && r<Board.length ; r=r+2 , c--){
       if(Board[r][c]=='K')
-        return false ;
+        return false;
       }
          
     //vertically up rigth
     r=row;
     for(int c=col ; c<Board.length && r>=0 ; r=r-2 , c++){
       if(Board[r][c]=='K')
-        return false ;
+        return false;
     }
              
     //vertically up left
     r=row;
     for( int c= col ; c>=0 && r>=0 ; r=r-2 , c--){
       if(Board[r][c]=='K')
-        return false ;
+        return false;
     }
              
     //Horizontally right up
     r=row;
     for(int c = col ; c<Board.length && r>=0 ; r-- , c=c+2){
       if(Board[r][c]=='K')
-        return false ;
+        return false;
     }
          
     // Horrizantally right down
     r=row;
     for(int c=col ;c<Board.length && r<Board.length ; r++ , c=c+2){
       if(Board[r][c]=='K')
-        return false ;
+        return false;
     }
          
     //Horrizantally left up
@@ -69,15 +69,15 @@ class knightChessBoard{
     r=row;
     for( int c=col ; c>=0 && r<Board.length ; r++ , c=c-2){
       if(Board[r][c]=='K')
-        return false ;
+        return false;
     }
-    return true ;
+    return true;
   } 
     
   public static void Helper(List<List<String>> knightpos ,char Board[][] , int n , int col , int row ){
     if(n==col){
-      allot(knightpos , Board);
-       return ;
+      allot(knightpos, Board);
+       return;
     }
         
     for(row =0 ; row<Board.length ; row++){
@@ -103,9 +103,12 @@ class knightChessBoard{
   public static void main(String args[]){
     Scanner sc= new Scanner (System.in);
 
+    System.out.println("Enter Board Size");
+
     int n=sc.nextInt();
 
-    System.out.println(knightChessboard( n) + " ");
+    System.out.println(knightChessboard(n) + " ");
+    
     
   }
 }
