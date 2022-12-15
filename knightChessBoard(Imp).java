@@ -91,7 +91,6 @@ class knightChessBoard{
   }
     
     public static List<List<String>> knightChessboard(int n) {
-    // Write your code here
     char Board[][]=new char[n][n];
     List<List<String>> Knigthpos = new ArrayList<>();
     
